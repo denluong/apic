@@ -11,7 +11,6 @@
 |
 */
 Route::get('/', function () {
-
     return View('welcome');
 });
 Route::get('/apilist', function ( App\Api $api) {
