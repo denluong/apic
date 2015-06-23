@@ -22,3 +22,19 @@ Route::get('/api/{id}', function ( App\Api $api , $id) {
 
     return Response::json($api->find($id));
 });
+Route::get('/formgen/{id}', function ( App\FormGenMast $formGenMast , $id) {
+
+    $formGenDet = new App\FormGenDet();
+
+    $returnData = array();
+
+    $formGenMastList = $formGenMast->find($id);
+
+    $formGenDetList = $formGenDet->all()->where('f_form_id', $id);;
+
+    $returnData = $formGenMastList;
+    $returnData['formDetList'] = $formGenDetList;
+
+    return Response::json($returnData);
+});
+//Route::get('formgen', 'FormGenController@getFormGen{id}');
