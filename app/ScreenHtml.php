@@ -4,22 +4,22 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;;
 
-class FormGenMast extends Model
+class ScreenHtml extends Model
 {
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'tbl_form_gen_mast';
+    protected $table = 'scr_html';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $primaryKey = "t_form_id";
-    protected $fillable = ['t_fg_name', 't_fg_id', 't_fg_class', 't_fg_method', 't_fg_function', 't_url'];
+    protected $primaryKey = "i_id";
+    protected $fillable = [];
 
     /**
      * The attributes excluded from the model's JSON form.
