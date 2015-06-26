@@ -19,7 +19,7 @@ class FormDet extends Model
      * @var array
      */
     protected $primaryKey = "i_frm_det_id";
-    protected $fillable = [];
+    protected $fillable = ['i_frm_id','t_wrapper_id'];
 
     /**
      * The attributes excluded from the model's JSON form.
